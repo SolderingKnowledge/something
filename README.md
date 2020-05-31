@@ -1,3 +1,3 @@
-first+first+first
-second+second+second
-third+third+third
+first+first
+second+second
+third+third
