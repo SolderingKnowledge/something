@@ -1,38 +1,24 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Repair from './components/Repair';
-import Device from './components/Device';
-import Colors from './components/Colors';
+import Input from './components/DefferedValue/Input'
+import TransitionInput from './components/Transition/TransitionInput'
+import logo from './logo.svg'
+import './App.css'
 
-const data = {
-  iPhone: {
-    iPhone8: ["black", "gold"],
-    iPhoneX: ["black", "white"]
-  },
-  iPad: {
-    mini: ["black", "gold"],
-    pro: ["black", "gold"],
-  }
-}
-class App extends Component {
-  // constructor() {
-  //   super();
-  //   this.state = {
-
-  //   }
-  // }
-
-  render() {
-    return (
-      <Router>
-        <div>
-          <Route exact path="/:device/:model" render={(props) => <Colors data={data} {...props} />} />
-          <Route exact path="/:device" render={(props) => <Device data={data} {...props} />} />
-          <Route exact path="/" component={Repair} />
-        </div>
-      </Router>
-    );
-  }
+function App() {
+	return (
+		<div className="App">
+			<header className="App-header">
+				<img src={logo} className="App-logo" alt="logo" />
+				<p>
+					Edit <code>src/App.js</code> and save to reload.
+				</p>
+				<a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
+					Learn React
+				</a>
+			</header>
+			<Input />
+			<TransitionInput />
+		</div>
+	)
 }
 
-export default App;
+export default App
